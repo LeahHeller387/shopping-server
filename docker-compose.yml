@@ -7,7 +7,7 @@ services:
     ports:
       - "1433:1433"
     environment:
-      SA_PASSWORD: tbttctcbvnesa
+      SA_PASSWORD: Tbttctc@123
       ACCEPT_EULA: Y
     volumes:
       - shopping_db_data:/var/opt/mssql
