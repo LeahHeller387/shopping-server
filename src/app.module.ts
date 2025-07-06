@@ -15,32 +15,22 @@ import { AuthModule } from './auth/auth.module';
   imports: [
     ConfigModule.forRoot({ isGlobal: true }),
     TypeOrmModule.forRootAsync({
-  inject: [ConfigService],
-  useFactory: (config: ConfigService) => {
-    // הדפסות לבדיקת טעינת משתני סביבה
-    console.log('🧪 DB_HOST:', config.get('DB_HOST'));
-    console.log('🧪 DB_PORT:', config.get('DB_PORT'));
-    console.log('🧪 DB_USERNAME:', config.get('DB_USERNAME'));
-    console.log('🧪 DB_PASSWORD:', config.get('DB_PASSWORD'));
-    console.log('🧪 DB_NAME:', config.get('DB_NAME'));
-
-    return {
-      type: 'mssql',
-      host: config.get('DB_HOST'),
-      port: +config.get('DB_PORT'),
-      username: config.get('DB_USERNAME'),
-      password: config.get('DB_PASSWORD'),
-      database: config.get('DB_NAME'),
-      synchronize: true,
-      autoLoadEntities: true,
-      options: {
-        encrypt: false,
-        trustServerCertificate: true,
-      },
-    };
-  },
-}),
-
+      inject: [ConfigService],
+      useFactory: (config: ConfigService) => ({
+        type: 'mssql',
+        host: config.get('DB_HOST'),
+        port: +config.get('DB_PORT'),
+        username: config.get('DB_USERNAME'),
+        password: config.get('DB_PASSWORD'),
+        database: config.get('DB_NAME'),
+        synchronize: true,
+        autoLoadEntities: true,
+        options: {
+          encrypt: false,
+          trustServerCertificate: true,
+        },
+      }),
+    }),
     UserModule,
     ProductModule,
     CategoryModule,
