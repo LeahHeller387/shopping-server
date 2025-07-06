@@ -52,8 +52,25 @@
 		{
 			"name": "getCategories",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoidGVzdHVzZXIiLCJpYXQiOjE3NTE3ODc3NjksImV4cCI6MTc1MTc4ODM2OX0.tVmqXooZ78qMqPxuTEAeFU2yr3ecFECYIwFLho6tBZ4",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
 				"url": {
 					"raw": "http://localhost:3000/category",
 					"protocol": "http",
@@ -71,6 +88,16 @@
 		{
 			"name": "getProducts",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoidGVzdHVzZXIiLCJpYXQiOjE3NTE3ODc3NjksImV4cCI6MTc1MTc4ODM2OX0.tVmqXooZ78qMqPxuTEAeFU2yr3ecFECYIwFLho6tBZ4",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [],
 				"url": {
@@ -96,8 +123,27 @@
 		{
 			"name": "addProductToCart",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoidGVzdHVzZXIiLCJpYXQiOjE3NTE3ODc3NjksImV4cCI6MTc1MTc4ODM2OX0.tVmqXooZ78qMqPxuTEAeFU2yr3ecFECYIwFLho6tBZ4",
+							"type": "string"
+						}
+					]
+				},
 				"method": "POST",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"productId\": 1,\r\n  \"quantity\": 2\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
 					"raw": "http://localhost:3000/cart/add",
 					"protocol": "http",
@@ -116,8 +162,27 @@
 		{
 			"name": "changeProductAmountInCart",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoidGVzdHVzZXIiLCJpYXQiOjE3NTE3ODc3NjksImV4cCI6MTc1MTc4ODM2OX0.tVmqXooZ78qMqPxuTEAeFU2yr3ecFECYIwFLho6tBZ4",
+							"type": "string"
+						}
+					]
+				},
 				"method": "PATCH",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"productId\": 1,\r\n  \"quantity\": 5\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
 					"raw": "http://localhost:3000/cart/update",
 					"protocol": "http",
@@ -136,8 +201,27 @@
 		{
 			"name": "deleteProductFromCart",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoidGVzdHVzZXIiLCJpYXQiOjE3NTE3ODc3NjksImV4cCI6MTc1MTc4ODM2OX0.tVmqXooZ78qMqPxuTEAeFU2yr3ecFECYIwFLho6tBZ4",
+							"type": "string"
+						}
+					]
+				},
 				"method": "DELETE",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"productId\": 1\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
 					"raw": "http://localhost:3000/cart/remove",
 					"protocol": "http",
@@ -156,6 +240,16 @@
 		{
 			"name": "getProductsFromCart",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoidGVzdHVzZXIiLCJpYXQiOjE3NTE3ODc3NjksImV4cCI6MTc1MTc4ODM2OX0.tVmqXooZ78qMqPxuTEAeFU2yr3ecFECYIwFLho6tBZ4",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [],
 				"url": {
