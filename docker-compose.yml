@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  db:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: shopping-db
+    ports:
+      - "1433:1433"
+    environment:
+      SA_PASSWORD: tbttctcbvnesa
+      ACCEPT_EULA: Y
+    volumes:
+      - shopping_db_data:/var/opt/mssql
+
+volumes:
+  shopping_db_data:
